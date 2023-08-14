@@ -14,7 +14,7 @@ import {
 } from "react-icons/bi";
 
 import { info, skills } from '../assets/data';
-import { FaSchool } from "react-icons/fa";
+import { FaSchool, } from "react-icons/fa";
 
 
 
@@ -44,6 +44,59 @@ export default function Home() {
           organization.
         </p>
       </section>
+
+
+      <section className="w-full pt-2">
+        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
+          <span>Work Experience</span> <FaPeopleGroup />
+        </h2>
+        <div>
+          <div className="collapse collapse-plus">
+            <input type="checkbox" name="" id="" />
+            <div className=" collapse-title">
+              <h2 >Zamboanga del Sur Electric Cooperative II</h2>
+              <a href="#" className="link-primary">Visit WebSite</a>
+            </div>
+            <div className="collapse-content">
+              <h2 className="my-1 font-medium">Company</h2>
+              <ul className="mx-4">
+                <li className="font-bold">ZAMSURECO II</li>
+                <li className="">Pangi, Ipil , Zamboanga Sibugay</li>
+                <li className="italic">Student Intern | OJT</li>
+                <li className="font-medium">Warehouse Man</li>
+                <li className="font-semibold">2023 | January - May</li>
+              </ul>
+              <h2 className="my-1 font-medium">Skills Developed/Gained</h2>
+              <ul className="mx-4">
+                <li>Adaptability & Flexibility</li>
+                <li>Time Management</li>
+                <li>Task Management</li>
+                <li>Inventory</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section className="w-full pt-2">
+        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
+          <span>Education</span> <FaSchool />
+        </h2>
+        <ul className="mx-3 mt-1">
+          <li className="font-bold"> {'>'} Dr. Aurelio Mendoza Memorial Colleges</li>
+          <li className="italic">College of Computer Studies Department</li>
+          <li className="font-medium">BS in Information Technology</li>
+          <li className="font-semibold">2019 - 2023</li>
+        </ul>
+        <ul className="mx-3 mt-1">
+          <li className="font-bold">{'>'} Dr. Aurelio Mendoza Memorial Colleges</li>
+          <li className="italic">Technology, Vocational, & Livelihood Track (TVL)</li>
+          <li className="font-medium">Computer Programming</li>
+          <li className="font-semibold">2017 - 2019</li>
+        </ul>
+      </section>
+
       {/* Skills & Tech */}
       <section className="w-full pt-2">
         <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
@@ -58,7 +111,7 @@ export default function Home() {
               <h4 className="ml-2 my-2 text-lg font-medium">Languages</h4>
               <ul className="ml-4 flex gap-2 items-center flex-wrap">
                 {skill.tech.lang.map((stack, stackIndex) => {
-                  return <li key={stackIndex} className="tooltip tooltip-primary hover:animate-pulse" data-tip={stack.name}>
+                  return <li key={stackIndex} className="tooltip tooltip-primary" data-tip={stack.name}>
                     {stack.icon}
                   </li>
                 })}
@@ -68,7 +121,7 @@ export default function Home() {
               <h4 className="ml-2 my-2 text-lg font-medium">Frontend - UI</h4>
               <ul className="ml-4 flex gap-2 items-center flex-wrap">
                 {skill.tech.front_stack.map((stack, stackIndex) => {
-                  return <li key={stackIndex} className="tooltip tooltip-primary hover:animate-pulse" data-tip={stack.name}>
+                  return <li key={stackIndex} className="tooltip tooltip-primary" data-tip={stack.name}>
                     {stack.icon}
                   </li>
                 })}
@@ -78,7 +131,7 @@ export default function Home() {
               <h4 className="ml-2 my-2 text-lg font-medium">Backend - REST API</h4>
               <ul className="ml-4 py-2 flex gap-2 items-center flex-wrap  ">
                 {skill.tech.back_stack.map((stack, stackIndex) => {
-                  return <li key={stackIndex} className="tooltip tooltip-primary hover:animate-pulse" data-tip={stack.name}>
+                  return <li key={stackIndex} className="tooltip tooltip-primary" data-tip={stack.name}>
                     {stack.icon}
                   </li>
                 })}
@@ -132,57 +185,6 @@ export default function Home() {
             instead
           </span>
         </p>
-      </section>
-
-      <section className="w-full pt-2">
-        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
-          <span>Work Experience</span> <FaPeopleGroup />
-        </h2>
-        <div>
-          <div className="collapse collapse-plus">
-            <input type="checkbox" name="" id="" />
-            <div className=" collapse-title">
-              <h2 >Zamboanga del Sur Electric Cooperative II</h2>
-              <a href="#" className="link-primary">Visit WebSite</a>
-            </div>
-            <div className="collapse-content">
-              <h2 className="my-1 font-medium">Company</h2>
-              <ul className="mx-4">
-                <li className="font-bold">ZAMSURECO II</li>
-                <li className="">Pangi, Ipil , Zamboanga Sibugay</li>
-                <li className="italic">Student Intern | OJT</li>
-                <li className="font-medium">Warehouse Man</li>
-                <li className="font-semibold">2023 | January - May</li>
-              </ul>
-              <h2 className="my-1 font-medium">Skills Developed/Gained</h2>
-              <ul className="mx-4">
-                <li>Adaptability & Flexibility</li>
-                <li>Time Management</li>
-                <li>Task Management</li>
-                <li>Inventory</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <section className="w-full pt-2">
-        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
-          <span>Education</span> <FaSchool />
-        </h2>
-        <ul className="mx-3 mt-1">
-          <li className="font-bold"> {'>'} Dr. Aurelio Mendoza Memorial Colleges</li>
-          <li className="italic">College of Computer Studies Department</li>
-          <li className="font-medium">BS in Information Technology</li>
-          <li className="font-semibold">2019 - 2023</li>
-        </ul>
-        <ul className="mx-3 mt-1">
-          <li className="font-bold">{'>'} Dr. Aurelio Mendoza Memorial Colleges</li>
-          <li className="italic">Technology, Vocational, & Livelihood Track (TVL)</li>
-          <li className="font-medium">Computer Programming</li>
-          <li className="font-semibold">2017 - 2019</li>
-        </ul>
       </section>
 
     </>

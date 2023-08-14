@@ -4,7 +4,7 @@ import {
     AiOutlinePhone,
 } from "react-icons/ai";
 
-import { SiMysql, SiExpress, SiTailwindcss, SiJavascript, SiNodedotjs, SiCss3, SiHtml5, SiPrisma, SiPhp, SiNodemon, SiDaisyui, SiReact } from "react-icons/si";
+import { SiMysql, SiExpress, SiTailwindcss, SiJavascript, SiNodedotjs, SiCss3, SiHtml5, SiPrisma, SiPhp, SiNodemon, SiDaisyui, SiReact, SiCsharp, SiMicrosoftaccess, SiVisualstudio, SiUikit, SiSqlite } from "react-icons/si";
 
 export const info = [
     {
@@ -27,6 +27,8 @@ export const info = [
         icon: <AiOutlineLinkedin size={24} />,
     },
 ];
+
+
 
 
 export const skills = [
@@ -54,6 +56,23 @@ export const skills = [
             ],
         }
     },
+    // {
+    //     name: 'Application Development',
+    //     tech: {
+    //         lang: [
+    //             { name: 'C#', icon: <SiCsharp size={36} /> },
+    //             { name: 'Visual Basic', icon: <div>Visual Basic</div> },
+    //         ],
+    //         front_stack: [
+    //             { name: 'C# GUI', icon: <SiCsharp size={36} /> },
+    //         ],
+    //         back_stack: [
+    //             { name: 'MySQL', icon: <SiMysql size={36} /> },
+    //             { name: 'MSAccess', icon: <SiMicrosoftaccess size={36} /> },
+    //             { name: 'SQLite', icon: <SiSqlite size={36} /> },
+    //         ],
+    //     }
+    // }
 ]
 
 import { BiLogoTailwindCss, BiLogoReact } from 'react-icons/bi';

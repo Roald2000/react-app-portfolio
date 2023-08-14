@@ -80,12 +80,16 @@ function Contents() {
             </li>
           </ul>
           <br />
-          <article className="italic text-center text-xs sm:text-md">
-            <span className="text-xl font-bold">&quot;</span> Daily Progress...
-            fosters not perfection, but unwavering determination and resilience
-            throughout life. While numerous individuals may persist and
-            persevere, without embracing the essence of failure, no valuable
-            lessons can be gleaned, thereby rendering all hardships futile.{" "}
+          <article className="group italic text-center text-xs sm:text-md tooltip tooltip-accent" data-tip={"Click to Copy"} onClick={() => {
+            navigator.clipboard.writeText(document.getElementById('quote').textContent);
+            alert('Content Copied to clipboard');
+          }}>
+            <span className="text-xl font-bold">&quot;</span>
+            <span id="quote" className=" cursor-pointer">Daily Progress...
+              fosters not perfection, but unwavering determination and resilience
+              throughout life. While numerous individuals may persist and
+              persevere, without embracing the essence of failure, no valuable
+              lessons can be gleaned, thereby rendering all hardships futile.</span>
             <span className="text-xl font-bold">&quot;</span>
             <br />
             <span className="font-bold text-2xl">-- Me</span>
