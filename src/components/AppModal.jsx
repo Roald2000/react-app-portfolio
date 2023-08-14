@@ -24,7 +24,6 @@ export const modalController = (id, isOpen = false) => {
             modal.close();
         }
     });
-
 }
 
 export default function AppModal({ id, title = "Modal", className, children }) {

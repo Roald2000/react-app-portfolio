@@ -73,7 +73,7 @@ function Contents() {
               <a
                 className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300"
                 href="https://github.com/Roald2000"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 GitHub <FaGithub />
               </a>

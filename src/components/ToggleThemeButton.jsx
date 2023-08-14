@@ -1,22 +1,34 @@
-import { FaSun, FaMoon } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function ToggleThemButton() {
-  const [isDarkMode, setDarkMode] = useState(true);
+import * as FaI from 'react-icons/fa6';
 
-  const toggleTheme = () => {
-    setDarkMode(!isDarkMode);
-    const docroot = document.getElementById("docroot");
-    if (isDarkMode) {
-      docroot.dataset.theme = "light";
+export default function ThemeToggleButton({ iconSize = 24 }) {
+  const [theme, setTheme] = useState('dark');
+
+  const toggle = () => {
+    if (theme === "light") {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
-      docroot.dataset.theme = "dark";
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
     }
-  };
+  }
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, [])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme])
 
   return (
-    <button className="btn" type="button" onClick={() => toggleTheme()}>
-      {isDarkMode ? <FaSun size={24} /> : <FaMoon size={24} />}
+    <button onClick={toggle} className="btn bg-base-300">
+      {theme === 'light' ? <FaI.FaMoon size={iconSize} /> : <FaI.FaSun size={iconSize} />}
     </button>
   );
 }
