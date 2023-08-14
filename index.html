@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html id="docroot" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="My Portfolio React App" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <title>My Portfolio App</title>
-    <script type="module" crossorigin src="/react-app-portfolio/assets/index-9372f63d.js"></script>
-    <link rel="stylesheet" href="/react-app-portfolio/assets/index-10fae215.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="My Portfolio React App" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <link rel="favicon" href="/react-app-portfolio/assets/favicon-485fe5e9.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/react-app-portfolio/assets/apple-touch-icon-a1c00b45.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAsBJREFUOE9dk09IVFEUxr/zXkguBDNQE/zznv8qMbVWowuhNARpYSSCmjIp2biRdKetlHTrQrQRBV0IiangJjclYo4rJ0VlRntvpIU2K2NGkHHq3Rv3vpmxeov7Lu+e853vvvM7BALA5QKxDwQCZdziXYpCDxljGgdBUemYWfyzqpBb0/N3ZaxMFGtMYGvLk5yZkTnKGOsEoMTOZZCIFykAGMCnVFXp0TQ9IgVEfuD4+Do4X2WcV4tQqc/JftuFpEq8LpGyTqA6Tdci8vybYbiJ6KUdFwsjO0VYvDKcMCQCJwvzC7oocBwoY4x7SdiOGxX/JFHZvoJ94cRGfGIq0X0yTXM8Go26Pq6uypzs7BxUVJRjbW0NkUgEJSV3kZOTC845PFsenJ6eoqamFjdSU4XkhBDwh0Oh4uft7ejudmH+/Txc3S4MDg7hhdOJlZUVND5rROg8DK/Xi0qHA3Nzc1hY+CAKHpJhGJfhcDjJ6XSir68PszOz6HK9wtuhISwtLyMYDKK/vx+WxTAyMoysrCz4fT4UFRdBITVKpmFchsLnSU1Njaivf4KD/T28c7vxtKFBCvwIBvFmYAC/LQsjw0LgFvb3DnD7TjFU9ZoQMP2hcLi4t/c1pqan0drSirGxMbS3taGjswNLS0tobmnG2dlP7Ox8RVVlFWZmZrC4uCg6dEiGaY7/il66tre9cDgc8Pv9SElJgc/nw8XFBUrvlSIvT5PN3Nj4gpOTE9TWPsbNtDQB8AQdHR2Vq6q6Leiz+x5/bLw5JwmT6ILEVvIhX8xi1gMZb5qGG7BBsim86ntcIMGjGBmpzScLCgq7pIBAmThftTiv/pufhJn/UCSidQLqNF23URZ+Njc9yekZ6aMAddpUXgFoQyhLM87FMKk9uqZH/pmVuGsxzoxzYe0ROM+NufgOok9EilvXtd0Y17LEH0IyOP+VHDP3AAAAAElFTkSuQmCC">
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+  <title>Roald Dela Cruz</title>
+  <script type="module" crossorigin src="/react-app-portfolio/assets/index-9372f63d.js"></script>
+  <link rel="stylesheet" href="/react-app-portfolio/assets/index-10fae215.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  
+</body>
+
 </html>
