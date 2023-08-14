@@ -6,8 +6,9 @@ export default function Projects() {
   return <section>
     {projects.map((projectItem, projectIndex) => {
       return <div key={projectIndex} className='my-2 bg-base-300 rounded p-2 flex flex-col gap-2 items-stretch justify-center'>
-        <h2 className='text-xl font-medium'>{projectItem.name}</h2>
-
+        <a href={projectItem.link} target='_blank' rel="noreferrer">
+          <h2 className='text-xl font-medium link-primary tooltip tooltip-open tooltip-right' data-tip="Click To Visit">{projectItem.name}</h2>
+        </a>
         <div className='mx-4 flex items-center justify-start flex-wrap gap-2'>
           <h3 className='text-md font-medium my-1'>Stack</h3>
           {projectItem.stack.map((stack, key) => {
