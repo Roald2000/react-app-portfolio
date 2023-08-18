@@ -16,7 +16,7 @@ import {
   SiPhp,
   SiNodemon,
   SiDaisyui,
-  SiReact, 
+  SiReact,
 } from "react-icons/si";
 
 export const info = [
@@ -185,5 +185,38 @@ export const projects = [
         techName: "Routing API endpoints",
       },
     ],
+  },
+];
+
+export const academia = [
+  {
+    name: "Dr. Aurelio Mendoza Memorial Colleges",
+    address: "Poblacion, Ipil, Zamboanga Sibugay Province",
+    academic_year: "2019 - 2023",
+    department: "College of Computer Studies",
+    degree_course: "Bachelor of Science in Information Technology",
+    major: "",
+  },
+  {
+    name: "Dr. Aurelio Mendoza Memorial Colleges",
+    address: "Poblacion, Ipil, Zamboanga Sibugay Province",
+    academic_year: "2017 - 2019",
+    department: "Senior High School",
+    degree_course: "Technology, Vocational & Livelihood Track",
+    major: "Computer Programming",
+  },
+];
+
+export const experience = [
+  {
+    company_institution: "Zamboanga del Sur Electric Cooperative II",
+    acron: "ZAMSURECO II",
+    address: "Poblacion, Ipil, Zamboanga Sibugay Province",
+    duration: "January - May 2023",
+    position: "On-The-Job Trainee / Intern",
+    department_assignment: {
+      department: "Finance Services Department",
+      section: "Warehouse Section",
+    },
   },
 ];

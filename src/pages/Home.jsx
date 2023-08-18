@@ -11,7 +11,13 @@ import {
 
 import { BiPen } from "react-icons/bi";
 
-import { info, personal_skills, skills } from "../assets/data";
+import {
+  info,
+  personal_skills,
+  skills,
+  academia,
+  experience,
+} from "../assets/data";
 import { FaMailBulk, FaSchool } from "react-icons/fa";
 
 export default function Home() {
@@ -49,25 +55,30 @@ export default function Home() {
           <span>Experience | Internships</span>
         </h2>
         <div className="" id="company_list">
-          <div className="mt-2">
-            <div className="flex items-center justify-between">
-              <h3 className="font-bold flex gap-2 items-center">
-                <span className="">ZAMSURECO II</span>
-                <span className="text-slate-500 italic font-light">
-                  Pangi, Ipil, Zamboanga Sibugay 7001
-                </span>
-              </h3>
-              <h3 className="font-normal">2023 January - May</h3>
-            </div>
-            <div className="divider my-1"></div>
-            <ul className="mx-2">
-              <li className="font-medium">
-                Zamboanga del Sur Electric Cooprative II
-              </li>
-              <li className="">Engineering Department -- Warehouse Office</li>
-              <li className="">Student Intern | OJT -- Warehouse Man</li>
-            </ul>
-          </div>
+          {experience.map((company, companyIndex) => {
+            return (
+              <div className="mt-2" key={companyIndex}>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold flex gap-2 items-center">
+                    <span className="">{company.acron}</span>
+                    <span className="text-slate-500 italic font-light">
+                      {company.address}
+                    </span>
+                  </h3>
+                  <h3 className="font-normal">{company.duration}</h3>
+                </div>
+                <div className="divider my-1"></div>
+                <ul className="mx-2">
+                  <li className="font-medium">{company.company_institution}</li>
+                  <li className="">
+                    {company.department_assignment.department} -{" "}
+                    {company.department_assignment.section}
+                  </li>
+                  <li className="">{company.position}</li>
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -77,49 +88,34 @@ export default function Home() {
           <FaSchool size={32} />
           <span>Education</span>
         </h2>
-        <div className="" id="company_list">
-          <div className="mt-4">
-            <div className="flex items-center justify-between">
-              <h3 className="font-bold flex gap-2 items-center">
-                <span className="">Dr. Aurelio Mendoza Memorial Colleges</span>
-                <span className="text-slate-500 italic font-light">
-                  Poblacion, Ipil, Zamboanga Sibugay 7001
-                </span>
-              </h3>
-              <h3 className="font-normal">2019 - 2023</h3>
-            </div>
-            <div className="divider my-1"></div>
-            <ul className="mx-2">
-              <li className="font-medium">College of Computer Studies</li>
-              <li className="">
-                Bachelor of Science in Information Technology
-              </li>
-            </ul>
-          </div>
-          <div className="mt-4">
-            <div className="flex items-center justify-between">
-              <h3 className="font-bold flex gap-2 items-center">
-                <span className="">Dr. Aurelio Mendoza Memorial Colleges</span>
-                <span className="text-slate-500 italic font-light">
-                  Poblacion, Ipil, Zamboanga Sibugay 7001
-                </span>
-              </h3>
-              <h3 className="font-normal">2017 - 2019</h3>
-            </div>
-            <div className="divider my-1"></div>
-            <ul className="mx-2">
-              <li className="font-medium">
-                Technology, Vocational & Livelihood Track (TVL)
-              </li>
-              <li className="">Computer Programming</li>
-            </ul>
-          </div>
+        <div className="" id="academia_list">
+          {academia.map((academic, academicIndex) => {
+            return (
+              <div key={academicIndex} className="mt-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold flex gap-2 items-center">
+                    <span className="">{academic.name}</span>
+                    <span className="text-slate-500 italic font-light">
+                      {academic.address}
+                    </span>
+                  </h3>
+                  <h3 className="font-normal">{academic.academic_year}</h3>
+                </div>
+                <div className="divider my-1"></div>
+                <ul className="mx-2">
+                  <li className="font-medium">{academic.department}</li>
+                  <li className="">{academic.degree_course}</li>
+                  {academic.major && <li>{academic.major}</li>}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </section>
 
       {/* Personal Skills */}
       <section className="w-full my-2">
-        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-center gap-2">
+        <h2 className="my-2 text-lg sm:text-2xl font-semibold flex items-centerrnotepad gap-2">
           <FaPerson size={32} />
           <span>Personal Skills</span>
         </h2>

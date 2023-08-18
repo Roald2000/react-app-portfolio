@@ -35,8 +35,10 @@ function Contents() {
               </Link>
             </h1>
           </li>
-          <li >
-            <Link className="btn" to={"/react-app-portfolio/projects"}>Projects</Link>
+          <li>
+            <Link className="btn" to={"/react-app-portfolio/projects"}>
+              Projects
+            </Link>
           </li>
           <li>
             <ToggleThemButton />
@@ -51,11 +53,11 @@ function Contents() {
           <ul className="flex justify-center items-center gap-1 ">
             <li>
               <a
-                className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300"
                 download={resumepdf}
-                href={resumepdf}
+                className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300 tooltip cursor-pointer"
+                data-tip="Click to download resume"
               >
-                PDF Resume <FaFilePdf />
+                Resume PDF <FaFilePdf />
               </a>
             </li>
             <li>|</li>
@@ -73,23 +75,32 @@ function Contents() {
               <a
                 className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300"
                 href="https://github.com/Roald2000"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 GitHub <FaGithub />
               </a>
             </li>
           </ul>
           <br />
-          <article className="group italic text-center text-xs sm:text-md tooltip tooltip-accent" data-tip={"Click to Copy"} onClick={() => {
-            navigator.clipboard.writeText(document.getElementById('quote').textContent);
-            alert('Content Copied to clipboard');
-          }}>
+          <article
+            className="group italic text-center text-xs sm:text-md tooltip tooltip-accent"
+            data-tip={"Click to Copy"}
+            onClick={() => {
+              navigator.clipboard.writeText(
+                document.getElementById("quote").textContent
+              );
+              alert("Content Copied to clipboard");
+            }}
+          >
             <span className="text-xl font-bold">&quot;</span>
-            <span id="quote" className=" cursor-pointer">Daily Progress...
-              fosters not perfection, but unwavering determination and resilience
-              throughout life. While numerous individuals may persist and
-              persevere, without embracing the essence of failure, no valuable
-              lessons can be gleaned, thereby rendering all hardships futile.</span>
+            <span id="quote" className=" cursor-pointer">
+              Daily Progress... fosters not perfection, but unwavering
+              determination and resilience throughout life. While numerous
+              individuals may persist and persevere, without embracing the
+              essence of failure, no valuable lessons can be gleaned, thereby
+              rendering all hardships futile.
+            </span>
             <span className="text-xl font-bold">&quot;</span>
             <br />
             <span className="font-bold text-2xl">-- Me</span>
@@ -99,7 +110,9 @@ function Contents() {
         <div className="flex items-center justify-center gap-3">
           <span>Made with </span>
           <div>
-            <BiLogoReact className="inline" size={32} /> <BiLogoTailwindCss className="inline" size={32} /> <SiDaisyui className="inline" size={32} />
+            <BiLogoReact className="inline" size={32} />{" "}
+            <BiLogoTailwindCss className="inline" size={32} />{" "}
+            <SiDaisyui className="inline" size={32} />
           </div>
         </div>
       </footer>
