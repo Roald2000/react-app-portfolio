@@ -15,10 +15,10 @@ import ToggleThemButton from "./components/ToggleThemeButton";
 import PagenotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import { FaFacebook, FaFilePdf, FaGithub } from "react-icons/fa6";
+import * as FaIcon from "react-icons/fa6";
 
-import { BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
-import { SiDaisyui } from "react-icons/si";
+import * as BIcon from "react-icons/bi";
+import * as SIcon from "react-icons/si";
 
 function Contents() {
   return (
@@ -41,6 +41,26 @@ function Contents() {
             </Link>
           </li>
           <li>
+            <a
+              download={resumepdf}
+              href={resumepdf}
+              className="hidden sm:flex items-center gap-2 btn btn-primary w-fit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Resume <FaIcon.FaDownload size={24} />
+            </a>
+            <a
+              download={resumepdf}
+              href={resumepdf}
+              className="flex sm:hidden items-center gap-2 btn btn-primary w-fit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaIcon.FaDownload size={24} />
+            </a>
+          </li>
+          <li>
             <ToggleThemButton />
           </li>
         </ul>
@@ -53,21 +73,11 @@ function Contents() {
           <ul className="flex justify-center items-center gap-1 ">
             <li>
               <a
-                download={resumepdf}
-                className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300 tooltip cursor-pointer"
-                data-tip="Click to download resume"
-              >
-                Resume PDF <FaFilePdf />
-              </a>
-            </li>
-            <li>|</li>
-            <li>
-              <a
                 className="flex items-center gap-1 text-slate-400 hover:text-slate-600 duration-300"
                 href="#"
               >
                 {" "}
-                Facebook <FaFacebook />
+                Facebook <FaIcon.FaFacebook />
               </a>
             </li>
             <li>|</li>
@@ -78,7 +88,7 @@ function Contents() {
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub <FaGithub />
+                GitHub <FaIcon.FaGithub />
               </a>
             </li>
           </ul>
@@ -110,9 +120,9 @@ function Contents() {
         <div className="flex items-center justify-center gap-3">
           <span>Made with </span>
           <div>
-            <BiLogoReact className="inline" size={32} />{" "}
-            <BiLogoTailwindCss className="inline" size={32} />{" "}
-            <SiDaisyui className="inline" size={32} />
+            <BIcon.BiLogoReact className="inline" size={32} />{" "}
+            <BIcon.BiLogoTailwindCss className="inline" size={32} />{" "}
+            <SIcon.SiDaisyui className="inline" size={32} />
           </div>
         </div>
       </footer>

@@ -54,27 +54,33 @@ export default function Home() {
           <FaPeopleRoof size={32} />
           <span>Experience | Internships</span>
         </h2>
-        <div className="" id="company_list">
+        <div
+          className=" p-2 rounded  shadow-[0px_0px_3px_1px_#0006]"
+          id="company_list"
+        >
           {experience.map((company, companyIndex) => {
             return (
               <div className="mt-2" key={companyIndex}>
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold flex gap-2 items-center">
-                    <span className="">{company.acron}</span>
-                    <span className="text-slate-500 italic font-light">
+                <div className="flex justify-between items-baseline flex-wrap">
+                  <ul className="flex flex-col gap-1">
+                    <li className="text-sm">
+                      {company.acron} - {company.company_institution}
+                    </li>
+                    <li className="text-sm italic text-slate-500">
                       {company.address}
-                    </span>
-                  </h3>
-                  <h3 className="font-normal">{company.duration}</h3>
+                    </li>
+                  </ul>
+                  <p className="flex-grow-1 text-sm">{company.duration}</p>
                 </div>
+
                 <div className="divider my-1"></div>
+
                 <ul className="mx-2">
-                  <li className="font-medium">{company.company_institution}</li>
+                  <li className="">{company.position}</li>
                   <li className="">
                     {company.department_assignment.department} -{" "}
                     {company.department_assignment.section}
                   </li>
-                  <li className="">{company.position}</li>
                 </ul>
               </div>
             );
@@ -91,15 +97,20 @@ export default function Home() {
         <div className="" id="academia_list">
           {academia.map((academic, academicIndex) => {
             return (
-              <div key={academicIndex} className="mt-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold flex gap-2 items-center">
-                    <span className="">{academic.name}</span>
-                    <span className="text-slate-500 italic font-light">
+              <div
+                key={academicIndex}
+                className="mt-4 p-2 rounded   shadow-[0px_0px_3px_1px_#0006]"
+              >
+                <div className="flex justify-between items-baseline flex-wrap">
+                  <ul className="flex flex-col gap-1">
+                    <li className="text-sm">{academic.name}</li>
+                    <li className="text-sm italic text-slate-500">
                       {academic.address}
-                    </span>
-                  </h3>
-                  <h3 className="font-normal">{academic.academic_year}</h3>
+                    </li>
+                  </ul>
+                  <p className="flex-grow-1 text-sm">
+                    {academic.academic_year}
+                  </p>
                 </div>
                 <div className="divider my-1"></div>
                 <ul className="mx-2">
@@ -122,7 +133,7 @@ export default function Home() {
         {personal_skills.map((skill, skillIndex) => {
           return (
             <ul key={skillIndex} className="my-2 mx-3">
-              <li className="flex items-center gap-2 hover: cursor-default hover:bg-primary hover:text-white p-1">
+              <li className="flex items-center gap-2 hover: cursor-default hover:bg-primary rounded-md hover:text-white p-1">
                 <FaArrowRight /> {skill.name}
               </li>
             </ul>
