@@ -17,6 +17,8 @@ import {
   SiNodemon,
   SiDaisyui,
   SiReact,
+  SiSequelize,
+  SiJsonwebtokens,
 } from "react-icons/si";
 
 export const info = [
@@ -70,8 +72,10 @@ export const skills = [
       back_stack: [
         { name: "NodeJs", icon: <SiNodedotjs size={36} /> },
         { name: "ExpressJs", icon: <SiExpress size={36} /> },
-        { name: "Nodemon", icon: <SiNodemon size={36} /> },
+        { name: "JSON Web Tokens", icon: <SiJsonwebtokens size={36} /> },
+        // { name: "Nodemon", icon: <SiNodemon size={36} /> },
         { name: "Prisma", icon: <SiPrisma size={36} /> },
+        { name: "Sequelize", icon: <SiSequelize size={36} /> },
         { name: "MySQL - DB", icon: <SiMysql size={36} /> },
       ],
     },
@@ -104,7 +108,8 @@ export const personal_skills = [
   { name: "Maintained a high level of flexibility by quickly adjusting to new priorities and projects, contributing to successful completion of team goals." },
   // { name: "Detail oriented" },  
   { name: "Consistently demonstrated exceptional attention to detail, ensuring accuracy and quality in all aspects of work." },
-  { name: "System OS Installation | Re-format" },
+  // { name: "System OS Installation | Re-format" },
+  { name: "Proficiently carry out Windows OS installation and reformatting on a regular basis, demonstrating basic knowledge and expertise in the optimization and configuration of personal devices." }
 ];
 
 import { BiLogoTailwindCss, BiLogoReact } from "react-icons/bi";

@@ -133,8 +133,9 @@ export default function Home() {
         {personal_skills.map((skill, skillIndex) => {
           return (
             <ul key={skillIndex} className="my-2 mx-3">
-              <li className="flex items-center gap-2 hover: cursor-default hover:bg-primary rounded-md hover:text-white p-1">
-                <FaArrowRight /> {skill.name}
+              <li className="md:text-sm textarea-md flex items-center gap-2 hover: cursor-default hover:bg-primary rounded-md hover:text-white p-2">
+                {/* <FaArrowRight size={32} />  */}
+                {skill.name}
               </li>
             </ul>
           );
