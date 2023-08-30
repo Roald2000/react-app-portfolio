@@ -96,10 +96,14 @@ export const skills = [
 ];
 
 export const personal_skills = [
-  { name: "Task Management" },
-  { name: "Adaptability" },
-  { name: "Flexibility" },
-  { name: "Detail Oriented" },
+  // { name: "Task Management" },
+  { name: "Streamlined task management to achieve optimal productivity and organization in high-pressure work environments." },
+  // { name: "Adaptability" },  
+  { name: "Demonstrated exceptional adaptability in successfully handling diverse and rapidly changing work environments." },
+  // { name: "FLexiblity" },  
+  { name: "Maintained a high level of flexibility by quickly adjusting to new priorities and projects, contributing to successful completion of team goals." },
+  // { name: "Detail oriented" },  
+  { name: "Consistently demonstrated exceptional attention to detail, ensuring accuracy and quality in all aspects of work." },
   { name: "System OS Installation | Re-format" },
 ];
 

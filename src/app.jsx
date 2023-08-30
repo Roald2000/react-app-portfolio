@@ -35,11 +35,11 @@ function Contents() {
               </Link>
             </h1>
           </li>
-          <li>
+          {/* <li>
             <Link className="btn" to={"/react-app-portfolio/projects"}>
               Projects
             </Link>
-          </li>
+          </li> */}
           <li>
             <a
               download={resumepdf}
@@ -135,7 +135,7 @@ export default function App() {
     createRoutesFromElements(
       <Route path="react-app-portfolio" element={<Contents />}>
         <Route path="/react-app-portfolio" element={<Home />} />
-        <Route path="/react-app-portfolio/projects" element={<Projects />} />
+        {/* <Route path="/react-app-portfolio/projects" element={<Projects />} /> */}
         <Route path="*" element={<PagenotFound />} />
       </Route>
     )

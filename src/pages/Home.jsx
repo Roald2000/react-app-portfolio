@@ -248,9 +248,9 @@ export default function Home() {
           <span>Simple Hobby Projects</span>
         </h2>
         <p className=" pl-3 flex items-center flex-wrap gap-2">
-          <span className="flex items-center gap-2">
+          {/* <span className="flex items-center gap-2">
             <FaCloudRain /> Undergoing Construction <FaPooStorm />
-          </span>
+          </span> */}
           <span className="flex items-center gap-1">
             Try checking my{" "}
             <a
